@@ -1,2 +1,42 @@
 muciq :*
 Dago smrdis
+
+Popis aplikácie 
+
+Aplikácia bude sluzit pre jednoduche monitorovanie osob v nasom pripade vaznov vo vaznici. Cielom je
+aby dozorcovia mali plny funkcny system s intuitivnym ovladanim
+
+Cielova skupina
+
+Nasou cielova skupina je predovsetkym pre zamestancov vaznice, cize bacharov. Ocakavame ze pouzivatelia nebudu velmi
+technicky zdatny. A ocakavame predovsetkym muzske zastupenie. Typicky pouzivatel by bol muz 30 rocny, ziadny IT expert, zakladna
+praca s pocitacom
+
+
+Typicke pripady pouzitia 
+
+Uzivatel bude nas produkt pouzivat predovsetkym kvoli ulahceniu prace pri monitorovani vaznov vo vaznici.
+Jeho cielom bude to, ze bude vsetkých vaznov vidiet v systeme kde sa nachadzaju pohodlne z bezpecia. Ak sa stane nieco
+vazne vo vaznici tak uzivatel rovno uvidi kto bol v ten cas na danom mieste.
+
+Prostredie pouzitia
+
+Produkt sa bude vyuzivat predovsetkym vo vazniciach. Kvoli bezpecnemu monitorovaniu
+
+Pozadavky produktu
+
+Zamestanci vaznice nevedia presne kde sa teraz nachadza vazen. Vdaka nasmu systemu zamestanci:
+
+- zistia presnu polohu vazna
+- zistia kolko ludi je v danej mmiestnosti
+- vsetky informacie si vedia zobrazit o jednotlivych vaznoch
+
+
+Navrh klucovych prvkov UI
+
+Nasim hlavnym cielom systemu je aby to bolo jednoduche a intuitivne. Preto bude uzivatelske rozhranie jednoduche a kazdy
+hned zisti co sa kde nachadza. Uvodnym oknom systemu bude menu kde si uzivatel bude moct vybrat bud miestnost alebo vazna.
+Po vybere z jednej moznosti sa uzivatelovi dalej zobrazi vypis vsetkych vaznov ktory sa nachadzaju vo vaznici. Vypise sa ich zoznam
+a pri ich mene sa ukaze rovno aj miestnost v ktorej sa nachadzaju aktualne. Na vazna sa bude dat kliknut a tym sa ukaze uzivatelovi
+informacie o danom vaznovi. Tak isto sa bude dat kliknut aj na miestnost a ta poskytne uzivateli informacie o miestnosti kde sa nachadza
+kolko a aky vazni sa tam momentalne nachadzaju.
