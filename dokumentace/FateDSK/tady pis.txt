@@ -1,4 +1,4 @@
-muciq :*
+ muciq :*
 Dago smrdis
 
 Popis aplikácie 
@@ -29,7 +29,7 @@ Zamestanci vaznice nevedia presne kde sa teraz nachadza vazen. Vdaka nasmu syste
 
 - zistia presnu polohu vazna
 - zistia kolko ludi je v danej mmiestnosti
-- vsetky informacie si vedia zobrazit o jednotlivych vaznoch
+- vsetky informacie si vedia zobrazit o jednotlivych vaznoch 
 
 
 Navrh klucovych prvkov UI
