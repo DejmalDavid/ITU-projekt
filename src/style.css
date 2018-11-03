@@ -1,3 +1,10 @@
+
+
+.click-row:hover{
+    background-color: grey;
+}
+
+
 html, body{
     height:100%;
     margin:0;
@@ -59,10 +66,26 @@ header .navigation button{
 header .navigation div.col-md-4{
 	padding: 0;
 }
+
 //
 // homepage
 //
 
-.prizemi{
-border: 20px solid;
+#prizemi{
+    position:absolute;
+    left:0px;
+    top:0px;
+}
+
+#patro{
+    position:absolute;
+    left:15px;
+    top:0px;
+ visibility: hidden;
+}
+
+#man_b_1{
+    position:absolute;
+    left:400px;
+    top:450px;
 }

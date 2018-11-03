@@ -1,21 +1,23 @@
 <?php 
-  
   session_start();
-
+  if (!isset($_SESSION['user'])) {
+    header('Location: index.php'); 
+	exit;
+  }
 ?> 
 <!DOCTYPE html>
-<html id="homepage">
+<html id="map">
 <head>
 <title>Šarkan-Monitoring</title>
 	<meta charset="UTF-8">
-	<meta name="author" content="Marek Kalabza, David Dejmal, Roman Čabala">
+	<meta name="author" content="Marek Kalabza, David Dejmal, Roman ÄŚabala">
 	<link rel="stylesheet" type="text/css" href="style.css">
 	<link href='http://fonts.googleapis.com/css?family=Titillium+Web' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 	</head>
 
-	<body>
+	<body onLoad="patro1();">
 	<header class="container-fluid">
 		<nav class="navbar navbar-light">
 			<form class="form-inline vertical-align form-header">
@@ -43,16 +45,166 @@
 		</nav>
 	</header>
 		
-	<section>
 		
 		
-		
-		
-	<h2>MAPA VOLE!</h2>
-	
-	<img src="./map/map_1.png" usemap="#image-map" id="prizemi">
+<!-- Start of David Dejmal -->
 
-<map name="image-map">
+<section>
+<script>
+var man_black = {
+"man_a11_1": "a", 
+"man_a11_2": "b",
+
+"man_a12_1":"b",
+"man_a12_2":"b",
+"man_a13_1":"b",
+"man_a13_2":"b",
+
+"man_b_11_1":"b",
+"man_b_11_2":"b",
+"man_b_12_1":"b",
+"man_b_12_2":"b",
+"man_b_13_1":"b",
+"man_b_13_2":"b",
+"man_b_14_1":"b",
+"man_b_14_2":"b",
+
+"man_c_11_1":"b",
+"man_c_11_2":"b",
+"man_c_12_1":"b",
+"man_c_12_2":"b",
+"man_c_13_1":"b",
+"man_c_13_2":"b",
+"man_c_14_1":"b",
+"man_c_14_2":"b",
+
+"man_d_11_1":"b",
+"man_d_11_2":"b",
+"man_d_12_1":"b",
+"man_d_12_2":"b",
+"man_d_13_1":"b",
+"man_d_13_2":"b",
+"man_d_14_1":"b",
+"man_d_14_2":"b",
+
+
+"man_ab_1":"b",
+"man_ab_1_2":"b",
+"man_cd_1":"b",
+"man_h_1":"b",
+
+"man_s_1":"b",
+"man_s_1_2":"b",
+
+"man_j_1":"b",
+"man_j_1_2":"b",
+
+};
+
+
+function patro1() {
+	document.getElementById("prizemi").style.visibility = "visible";
+	document.getElementById("patro").style.visibility = "hidden";
+	document.getElementById("btn_1").setAttribute("class","btn btn-outline-success");
+	document.getElementById("btn_2").setAttribute("class","btn btn-outline-secondary");
+
+	men(1);
+
+}
+function patro2() {
+	document.getElementById("prizemi").style.visibility = "hidden";
+	document.getElementById("patro").style.visibility = "visible";
+	document.getElementById("btn_1").setAttribute("class","btn btn-outline-secondary");
+	document.getElementById("btn_2").setAttribute("class","btn btn-outline-success");
+
+	men(2);
+}
+function men(patro) {
+	var stav_a = "visible";
+	var stav_b = "hidden";
+
+	if(patro==1)
+	{
+		stav_a="hidden";
+		stav_b="visible";	
+	}
+
+	for (var key in man_black) {
+		if(man_black[key]=="a")
+		{
+			document.getElementById(key).style.visibility = stav_a;
+		}
+		else
+		{
+			document.getElementById(key).style.visibility = stav_b;
+		}
+	} 
+
+}
+</script>
+
+<div class="container" >
+	<div class="row">
+	<div class="col-md-1" >
+		<ul class="nav flex-md-column vertical-align">
+			<li class="nav-item">
+				<button id="btn_1" class="btn btn-outline-success" type="button" onclick="patro1()" onLoad="patro1()" >1.Patro</button>
+			</li>
+			<li class="nav-item">
+				<button id="btn_2" class="btn btn-outline-secondary" type="button" onclick="patro2()">2.Patro</button>
+			</li>
+		</ul>
+	</div>
+	<div class="col-md-8">
+
+	<img src="./map/man_black.png"  height="42" width="42" style="position:absolute; left:60px; top:115px; z-index: 10;" id="man_a11_1">
+	<img src="./map/man_black.png"  height="42" width="42" style="position:absolute; left:90px; top:115px; z-index: 10;" id="man_a11_2">
+	<img src="./map/man_black.png"  height="42" width="42" style="position:absolute; left:60px; top:285px; z-index: 10;" id="man_a12_1">
+	<img src="./map/man_black.png"  height="42" width="42" style="position:absolute; left:90px; top:285px; z-index: 10;" id="man_a12_2">
+	<img src="./map/man_black.png"  height="42" width="42" style="position:absolute; left:60px; top:460px; z-index: 10;" id="man_a13_1">
+	<img src="./map/man_black.png"  height="42" width="42" style="position:absolute; left:90px; top:460px; z-index: 10;" id="man_a13_2">
+
+	<img src="./map/man_black.png"  height="42" width="42" style="position:absolute; left:400px; top:115px; z-index: 10;" id="man_b_11_1">
+	<img src="./map/man_black.png"  height="42" width="42" style="position:absolute; left:430px; top:115px; z-index: 10;" id="man_b_11_2">
+	<img src="./map/man_black.png"  height="42" width="42" style="position:absolute; left:410px; top:285px; z-index: 10;" id="man_b_12_1">
+	<img src="./map/man_black.png"  height="42" width="42" style="position:absolute; left:430px; top:285px; z-index: 10;" id="man_b_12_2">
+	<img src="./map/man_black.png"  height="42" width="42" style="position:absolute; left:410px; top:460px; z-index: 10;" id="man_b_13_1">
+	<img src="./map/man_black.png"  height="42" width="42" style="position:absolute; left:430px; top:460px; z-index: 10;" id="man_b_13_2">
+	<img src="./map/man_black.png"  height="42" width="42" style="position:absolute; left:410px; top:630px; z-index: 10;" id="man_b_14_1">
+	<img src="./map/man_black.png"  height="42" width="42" style="position:absolute; left:430px; top:630px; z-index: 10;" id="man_b_14_2">
+
+	<img src="./map/man_black.png"  height="42" width="42" style="position:absolute; left:580px; top:115px; z-index: 10;" id="man_c_11_1">
+	<img src="./map/man_black.png"  height="42" width="42" style="position:absolute; left:610px; top:115px; z-index: 10;" id="man_c_11_2">
+	<img src="./map/man_black.png"  height="42" width="42" style="position:absolute; left:580px; top:285px; z-index: 10;" id="man_c_12_1">
+	<img src="./map/man_black.png"  height="42" width="42" style="position:absolute; left:610px; top:285px; z-index: 10;" id="man_c_12_2">
+	<img src="./map/man_black.png"  height="42" width="42" style="position:absolute; left:580px; top:460px; z-index: 10;" id="man_c_13_1">
+	<img src="./map/man_black.png"  height="42" width="42" style="position:absolute; left:610px; top:460px; z-index: 10;" id="man_c_13_2">
+	<img src="./map/man_black.png"  height="42" width="42" style="position:absolute; left:580px; top:630px; z-index: 10;" id="man_c_14_1">
+	<img src="./map/man_black.png"  height="42" width="42" style="position:absolute; left:610px; top:630px; z-index: 10;" id="man_c_14_2">
+
+	<img src="./map/man_black.png"  height="42" width="42" style="position:absolute; left:950px; top:115px; z-index: 10;" id="man_d_11_1">
+	<img src="./map/man_black.png"  height="42" width="42" style="position:absolute; left:980px; top:115px; z-index: 10;" id="man_d_11_2">
+	<img src="./map/man_black.png"  height="42" width="42" style="position:absolute; left:950px; top:285px; z-index: 10;" id="man_d_12_1">
+	<img src="./map/man_black.png"  height="42" width="42" style="position:absolute; left:980px; top:285px; z-index: 10;" id="man_d_12_2">
+	<img src="./map/man_black.png"  height="42" width="42" style="position:absolute; left:950px; top:460px; z-index: 10;" id="man_d_13_1">
+	<img src="./map/man_black.png"  height="42" width="42" style="position:absolute; left:980px; top:460px; z-index: 10;" id="man_d_13_2">
+	<img src="./map/man_black.png"  height="42" width="42" style="position:absolute; left:950px; top:630px; z-index: 10;" id="man_d_14_1">
+	<img src="./map/man_black.png"  height="42" width="42" style="position:absolute; left:980px; top:630px; z-index: 10;" id="man_d_14_2">
+
+
+	<img src="./map/man_black.png"  height="42" width="42" style="position:absolute; left:250px; top:300px; z-index: 10;" id="man_ab_1">
+	<img src="./map/man_black.png"  height="42" width="42" style="position:absolute; left:250px; top:350px; z-index: 10;" id="man_ab_1_2">
+	<img src="./map/man_black.png"  height="42" width="42" style="position:absolute; left:760px; top:300px; z-index: 10;" id="man_cd_1">
+	<img src="./map/man_black.png"  height="42" width="42" style="position:absolute; left:370px; top:720px; z-index: 10;" id="man_h_1">
+
+	<img src="./map/man_black.png"  height="42" width="42" style="position:absolute; left:790px; top:825px; z-index: 10;" id="man_s_1">
+	<img src="./map/man_black.png"  height="42" width="42" style="position:absolute; left:760px; top:825px; z-index: 10;" id="man_s_1_2">
+
+	<img src="./map/man_black.png"  height="42" width="42" style="position:absolute; left:560px; top:1000px; z-index: 10;" id="man_j_1">
+	<img src="./map/man_black.png"  height="42" width="42" style="position:absolute; left:590px; top:1000px; z-index: 10;" id="man_j_1_2">
+
+	<img src="./map/map_1.png" usemap="#image-map" id="prizemi" >
+<map name="image-map" >
     <area target="" alt="Cela-A11" title="Cela-A11" href="" coords="7,168,190,3" shape="rect">
     <area target="" alt="Cela-A12" title="Cela-A12" href="" coords="5,340,188,175" shape="rect">
     <area target="" alt="Cela-A13" title="Cela-A13" href="" coords="192,515,6,345" shape="rect">
@@ -75,7 +227,7 @@
     <area target="" alt="Chodba-S1" title="Chodba-S1" href="" coords="387,801,517,1209" shape="rect">
     <area target="" alt="Sprchy-1" title="Sprchy-1" href="" coords="518,770,1017,930" shape="rect">
     <area target="" alt="Jidelna-1" title="Jidelna-1" href="" coords="521,933,925,1208" shape="rect">
-    <area target="" alt="Kuchyne-1" title="Kuchyn�-1" href="" coords="925,932,1018,1209" shape="rect">
+    <area target="" alt="Kuchyne-1" title="Kuchyně-1" href="" coords="925,932,1018,1209" shape="rect">
     <area target="" alt="Dozorna-1" title="Dozorna-1" href="" coords="3,802,386,1210" shape="rect">
 </map>
 
@@ -109,11 +261,11 @@
 </map>
 		
 
-	<img src="./map/man_black.png"  height="42" width="42" id="black">
-	<img src="./map/man_red.png" height="42" width="42" id="green">
-	<img src="./map/man_green.png" height="42" width="42" id="green">
-
-	</section>
+	
+</div>
+</div>
+</div>
+</section>
 
 	<footer style="text-align: center;">
 		<span>Copyright © 2018 | Šarkan-Monitoring</span>
